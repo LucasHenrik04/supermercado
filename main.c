@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 
 int main(int argc, char *argv[]) {
 	printf("Bem vindo ao Supermercado Roludo!\n");
 		
-	void cadastro(){
-		printf("Escreva o produto a ser cadastrado");
-	}
+
 	int sair(){
 		return 0;
 	}
@@ -26,11 +25,30 @@ int main(int argc, char *argv[]) {
 			scanf("%d", &n);
 			return n;
 		}
-
+	
+		void cadastro(){
+		float valor, soma;
+		int quantidade;
+		static int ID = 1;
+		char produto[50];
+		
+		
+		printf("\nEscreva o produto a ser cadastrado: ");
+		scanf (" %49[^\n]", &produto);
+		printf("Escreva a quantidade requisitada do produto: ");
+		scanf ("%d", &quantidade);
+		printf ("Escreva o valor unitario do produto: R$");
+		scanf ("%f", &valor);
+		soma = quantidade * valor;
+		printf ("ID do produto: %05d\n", ID);
+		printf("\nProduto cadastrado com sucesso: %d %s R$%.2f ID %05d\n", quantidade, produto, soma, ID);
+		ID++;
+	}
 		
 		switch(opcao()){
 			case 1:
 				cadastro();
+				menu();
 				break;
 			case 2:
 				printf("pintovaldo");
