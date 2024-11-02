@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 int main(int argc, char *argv[]) {
@@ -11,16 +12,18 @@ int main(int argc, char *argv[]) {
 	// listar produtos
 	// registro de compras
 	
+	
+	
 	// ricardo:
 	// Calcular total
-	// Geração de receba
+	// Geraï¿½ï¿½o de receba
 	// Sair
 	
 	// ESTSRUTURA DO PROJETO
 
 	/*Defina uma struct chamada Produto com os campos codigo, nome e preco.
 Defina uma struct chamada ItemCompra para representar um item da compra com codigo, quantidade, nome e subtotal.
-Funções Sugeridas:
+Funï¿½ï¿½es Sugeridas:
 
 void cadastrarProduto(): para adicionar produtos ao sistema.
 void listarProdutos(): para exibir todos os produtos cadastrados.
