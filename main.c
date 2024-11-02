@@ -5,7 +5,55 @@
 
 int main(int argc, char *argv[]) {
 	printf("Bem vindo ao Supermercado Roludo!\n");
+		
+	void cadastro(){
+		printf("Escreva o produto a ser cadastrado");
+	}
+	int sair(){
+		return 0;
+	}
 
+	
+	int n;
+	void menu(){
+		
+		int opcao(){
+			printf("\n1 - Cadastro de produtos\n");
+			printf("2 - Listar produtos\n");
+			printf("3 - Registro de compras\n");
+			printf("4 - Sair\n");
+			printf("Selecione a opcao desejada: ");
+			scanf("%d", &n);
+			return n;
+		}
+
+		
+		switch(opcao()){
+			case 1:
+				cadastro();
+				break;
+			case 2:
+				printf("pintovaldo");
+				break;
+			case 3:
+				printf("pintonildo");
+				break;
+			case 4:
+				printf("Saindo...");
+				sair();
+				break;
+
+
+			default:
+				printf("\nSelecione uma opcao valida\n");
+				opcao();
+				
+			
+		}
+	} 
+	
+	menu();
+	
 
 	
 	
@@ -37,10 +85,7 @@ Arquivos:
 
 produtos.txt: para armazenar os produtos cadastrados.
 recibo.txt: para armazenar o recibo da compra.*/
-	inr sair(){
-		return 0;
-	}
-	sair();
+
 
 	
 }
