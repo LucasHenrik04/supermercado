@@ -1,15 +1,60 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 int main(int argc, char *argv[]) {
-	printf("Bem vindo ao Supermercado Roludo!");
-	return 0;
+	printf("Bem vindo ao Supermercado Roludo!\n");
+	
+		
+	
+	
+	int n;
+	void menu(){
+		
+		int opcao(){
+			printf("\n1 - Cadastro de produtos\n");
+			printf("2 - Listar produtos\n");
+			printf("3 - Registro de compras\n");
+			printf("4 - Sair\n");
+			printf("Selecione a opcao desejada: ");
+			scanf("%d", &n);
+			return n;
+		}
+
+		
+		switch(opcao()){
+			case 1:
+				printf("Escreva");
+				break;
+			case 2:
+				printf("pintovaldo");
+				break;
+			case 3:
+				printf("pintonildo");
+				break;
+			case 4:
+				printf("pintovildo");
+				break;
+			default:
+				printf("\nSelecione uma opcao valida\n");
+				opcao();
+				
+			
+		}
+	} 
+	
+	menu();
+	
+
+	
 	
 	// lucas:
 	// cadastro de produtos
 	// listar produtos
 	// registro de compras
+	
+	
 	
 	// ricardo:
 	// Calcular total
@@ -33,5 +78,6 @@ Arquivos:
 produtos.txt: para armazenar os produtos cadastrados.
 recibo.txt: para armazenar o recibo da compra.*/
 	
+	return 0;
 	
 }
