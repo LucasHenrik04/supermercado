@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
 	printf("Bem vindo ao Supermercado Roludo!");
-	return 0;
+
 	
 	// lucas:
 	// cadastro de produtos
@@ -32,6 +32,12 @@ Arquivos:
 
 produtos.txt: para armazenar os produtos cadastrados.
 recibo.txt: para armazenar o recibo da compra.*/
+
+	int sair(){
+		return 0;
+	}
+
+
 	
-	
+	sair();
 }
