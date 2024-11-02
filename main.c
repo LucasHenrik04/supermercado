@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
 		int opcao(){
 			printf("\n1 - Cadastro de produtos\n");
 			printf("2 - Listar produtos\n");
-			printf("3 - Registro de compras\n");
+			printf("3 - Finalizar compra\n");
+			//EM FINALIZAR COMPRA - FAZER A GERAÇÃO DE RECIBO (NOTA FISCAL)
 			printf("4 - Sair\n");
 			printf("Selecione a opcao desejada: ");
 			scanf("%d", &n);
