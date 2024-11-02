@@ -6,7 +6,9 @@
 int main(int argc, char *argv[]) {
 	printf("Bem vindo ao Supermercado Roludo!\n");
 	
-		
+	void cadastro(){
+		printf("Escreva o produto a ser cadastrado");
+	}
 	
 	
 	int n;
@@ -25,7 +27,7 @@ int main(int argc, char *argv[]) {
 		
 		switch(opcao()){
 			case 1:
-				printf("Escreva");
+				cadastro();
 				break;
 			case 2:
 				printf("pintovaldo");
