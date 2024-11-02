@@ -4,8 +4,10 @@
 
 
 int main(int argc, char *argv[]) {
-	printf("Bem vindo ao Supermercado Roludo!");
+	printf("Bem vindo ao Supermercado Roludo!\n");
 
+
+	
 	
 	// lucas:
 	// cadastro de produtos
@@ -16,14 +18,14 @@ int main(int argc, char *argv[]) {
 	
 	// ricardo:
 	// Calcular total
-	// Geraï¿½ï¿½o de receba
+	// Geração de receba
 	// Sair
 	
 	// ESTSRUTURA DO PROJETO
 
 	/*Defina uma struct chamada Produto com os campos codigo, nome e preco.
 Defina uma struct chamada ItemCompra para representar um item da compra com codigo, quantidade, nome e subtotal.
-Funï¿½ï¿½es Sugeridas:
+Funções Sugeridas:
 
 void cadastrarProduto(): para adicionar produtos ao sistema.
 void listarProdutos(): para exibir todos os produtos cadastrados.
@@ -35,12 +37,10 @@ Arquivos:
 
 produtos.txt: para armazenar os produtos cadastrados.
 recibo.txt: para armazenar o recibo da compra.*/
-
-	int sair(){
+	inr sair(){
 		return 0;
 	}
-
+	sair();
 
 	
-	sair();
 }
