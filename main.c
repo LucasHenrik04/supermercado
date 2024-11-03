@@ -19,10 +19,9 @@ int main(int argc, char *argv[]) {
 		
 		int opcao(){
 			printf("\n1 - Cadastro de produtos\n");
-			printf("2 - Listar produtos\n");
-			printf("3 - Finalizar compra\n");
-			//EM FINALIZAR COMPRA - FAZER A GERAÇÃO DE RECEBA (NOTA FISCAL) DEPOIS DE RECEBER O PAGAMENTO
-			printf("4 - Sair\n");
+			printf("2 - Finalizar compra\n");
+			//EM FINALIZAR COMPRA - FAZER A GERAï¿½ï¿½O DE RECEBA (NOTA FISCAL) DEPOIS DE RECEBER O PAGAMENTO
+			printf("3 - Sair\n");
 			printf("Selecione a opcao desejada: ");
 			scanf("%d", &n);
 			return n;
@@ -79,6 +78,74 @@ int main(int argc, char *argv[]) {
 		printf("Total: %.2f",total);
 		
 	}
+
+	void finalizando(){
+			float total = 500, parcela, i;
+			int clthanos, senha, sim, nao, ab;
+			
+			printf("\nValor total da compra: R$\n", total);
+			
+			printf("\nEscolha a forma de pagamento desejada: \n");
+			printf("1 - Debito.\n");
+			printf("2 - Credito.\n");
+			printf("3 - Dinheiro.\n");
+			printf("4 - Lavando prato escala 6x1.\n");
+			scanf("%d", &clthanos);
+			
+			switch(clthanos){
+				case 1:
+				printf("\nFinalizando a compra...\n");
+				printf("Insira a senha: ");
+				scanf("%d", &senha);
+				printf("\nPagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
+				break;
+				case 2:
+				printf("Finalizando a compra...\n");
+				printf("Deseja parcelar?\n");
+				printf("Digite 1 para sim, 2 para nao\n");
+				scanf("%d", &ab);
+				if(ab == 2){
+					printf("\nInsira a senha: ");
+					scanf("%d", &senha);
+					printf("Pagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
+				}
+				if(ab == 1){
+					printf("\nDeseja parcelar em quantas vezes?\n");
+					printf("Parcelamos ate 5x sem juros: \n");
+					printf ("1x = %.2f\n", parcela = total / 1);
+					printf ("2x = %.2f\n", parcela = total / 2);
+					printf ("3x = %.2f\n", parcela = total / 3);
+					printf ("4x = %.2f\n", parcela = total / 4);
+					printf ("5x = %.2f\n", parcela = total / 5);
+					printf ("Desejo parcelar em (DIGITE APENAS O NUMERO): "); 
+					scanf ("%d", &sim);
+					printf ("Insira a senha: ");
+					scanf ("%d", &senha);
+					printf("Pagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
+				}
+				break;
+				case 3:
+					printf("Finalizando a compra...\n");
+					printf("Quanto seria em dinheiro?");
+					scanf ("%f", i);
+					if (i > total){
+						printf("RECEBA SEU TROCO\n");
+						printf("Pagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
+					}
+					if (i < total){
+						printf("ta faltando dinheiro seu pobre imundo\n");
+					}
+					if (i == total){
+						printf("Pagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
+					}
+					break;
+				case 4:
+					printf("Obrigado por se voluntariar, porem nao aceitamos essa forma de pagamento SEU POBRE FUDIDO\n");
+					break;
+			}
+			
+		}
+
 		
 		switch(opcao()){
 			case 1:
@@ -86,14 +153,11 @@ int main(int argc, char *argv[]) {
 				menu();
 				break;
 			case 2:
-				printf("pintovaldo");
+				finalizando();
+				menu();
 				break;
 			case 3:
-				printf("pintonildo");
-				break;
-			case 4:
 				printf("Saindo...");
-				sair();
 				break;
 
 
@@ -119,14 +183,14 @@ int main(int argc, char *argv[]) {
 	
 	// ricardo:
 	// Calcular total
-	// Geração de receba
+	// Geraï¿½ï¿½o de receba
 	// Sair
 	
 	// ESTSRUTURA DO PROJETO
 
 	/*Defina uma struct chamada Produto com os campos codigo, nome e preco.
 Defina uma struct chamada ItemCompra para representar um item da compra com codigo, quantidade, nome e subtotal.
-Funções Sugeridas:
+Funï¿½ï¿½es Sugeridas:
 
 void cadastrarProduto(): para adicionar produtos ao sistema.
 void listarProdutos(): para exibir todos os produtos cadastrados.
