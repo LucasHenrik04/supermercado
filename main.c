@@ -20,8 +20,8 @@ int main(int argc, char *argv[]) {
 		int opcao(){
 			printf("\n1 - Cadastro de produtos\n");
 			printf("2 - Finalizar compra\n");
-			//EM FINALIZAR COMPRA - FAZER A GERA��O DE RECEBA (NOTA FISCAL) DEPOIS DE RECEBER O PAGAMENTO
 			printf("3 - Sair\n");
+			//EM FINALIZAR COMPRA - FAZER A GERA��O DE RECIBO (NOTA FISCAL)
 			printf("Selecione a opcao desejada: ");
 			scanf("%d", &n);
 			return n;
@@ -155,12 +155,12 @@ int main(int argc, char *argv[]) {
 			case 2:
 				finalizando();
 				menu();
+				finalizando();
+				menu();
 				break;
 			case 3:
 				printf("Saindo...");
 				break;
-
-
 			default:
 				printf("\nSelecione uma opcao valida\n");
 				opcao();
