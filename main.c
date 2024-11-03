@@ -6,7 +6,8 @@
 
 int main(int argc, char *argv[]) {
 	printf("Bem vindo ao Supermercado Roludo!\n");
-		
+	
+	float total = 0;
 
 	int sair(){
 		return 0;
@@ -20,7 +21,7 @@ int main(int argc, char *argv[]) {
 			printf("\n1 - Cadastro de produtos\n");
 			printf("2 - Finalizar compra\n");
 			printf("3 - Sair\n");
-			//EM FINALIZAR COMPRA - FAZER A GERAÇÃO DE RECIBO (NOTA FISCAL)
+			//EM FINALIZAR COMPRA - FAZER A GERAï¿½ï¿½O DE RECIBO (NOTA FISCAL)
 			printf("Selecione a opcao desejada: ");
 			scanf("%d", &n);
 			return n;
@@ -28,22 +29,57 @@ int main(int argc, char *argv[]) {
 	
 		void cadastro(){
 		float valor, soma;
-		int quantidade;
+		int quantidade, escolha;
 		static int ID = 1;
 		char produto[50];
 		
-		printf("\nEscreva o produto a ser cadastrado: ");
-		scanf (" %49[^\n]", &produto);
-		printf("Escreva a quantidade requisitada do produto: ");
-		scanf ("%d", &quantidade);
-		printf ("Escreva o valor unitario do produto: R$");
-		scanf ("%f", &valor);
-		soma = quantidade * valor;
-		printf ("ID do produto: %05d\n", ID);
-		printf("\nProduto cadastrado com sucesso: %d %s R$%.2f ID %05d\n", quantidade, produto, soma, ID);
-		ID++;
+		printf("Quando terminar, digite algo nao numerico no meu saco (nome do produto no caso): \n");
+		
+		while(1){
+		
+		
+			printf("\nEscreva o produto a ser cadastrado: ");
+			scanf (" %49[^\n]", produto);
+			printf("Escreva a quantidade requisitada do produto: ");
+			scanf ("%d", &quantidade);
+			printf ("Escreva o valor unitario do produto: R$");
+			scanf ("%f", &valor);
+			soma = quantidade * valor;
+			printf ("ID do produto: %05d\n", ID);
+			printf("\nProduto cadastrado com sucesso: %d %s R$%.2f ID %05d\n", quantidade, produto, soma, ID);
+			printf("\nDeseja continuar cadastrando? se sim digite 1, se nao digite 2 nesse caralho: ");
+			scanf("%d", &escolha);
+			ID++;
+			total += soma;
+			switch(escolha){
+				case 1:
+					continue;
+				case 2:
+					printf("finalizando cadastro...");
+					break;
+				default:
+					printf("Le direito analfabeto burro \n");
+					switch(escolha){
+						case 1:
+							continue;
+						case 2:
+							printf("finalizando cadastro...");
+							break;
+						default:
+							printf("pinto");
+					}
+			}
+			
+			if(escolha == 2){
+				break;
+			}
+			
+		}
+		printf("Total: %.2f",total);
+		
 	}
-		void finalizando(){
+
+	void finalizando(){
 			float total = 500, parcela, i;
 			int clthanos, senha, sim, nao, ab;
 			
@@ -109,6 +145,7 @@ int main(int argc, char *argv[]) {
 			}
 			
 		}
+
 		
 		switch(opcao()){
 			case 1:
@@ -118,10 +155,11 @@ int main(int argc, char *argv[]) {
 			case 2:
 				finalizando();
 				menu();
+				finalizando();
+				menu();
 				break;
 			case 3:
 				printf("Saindo...");
-				sair();
 				break;
 			default:
 				printf("\nSelecione uma opcao valida\n");
@@ -145,14 +183,14 @@ int main(int argc, char *argv[]) {
 	
 	// ricardo:
 	// Calcular total
-	// Geração de receba
+	// Geraï¿½ï¿½o de receba
 	// Sair
 	
 	// ESTSRUTURA DO PROJETO
 
 	/*Defina uma struct chamada Produto com os campos codigo, nome e preco.
 Defina uma struct chamada ItemCompra para representar um item da compra com codigo, quantidade, nome e subtotal.
-Funções Sugeridas:
+Funï¿½ï¿½es Sugeridas:
 
 void cadastrarProduto(): para adicionar produtos ao sistema.
 void listarProdutos(): para exibir todos os produtos cadastrados.
