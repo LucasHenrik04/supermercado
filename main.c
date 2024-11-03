@@ -80,10 +80,10 @@ int main(int argc, char *argv[]) {
 	}
 
 	void finalizando(){
-			float total = 500, parcela, i;
+			float parcela, i;
 			int clthanos, senha, sim, nao, ab;
 			
-			printf("\nValor total da compra: R$\n", total);
+			printf("\nValor total da compra: R$%.2f\n", total);
 			
 			printf("\nEscolha a forma de pagamento desejada: \n");
 			printf("1 - Debito.\n");
@@ -127,9 +127,9 @@ int main(int argc, char *argv[]) {
 				case 3:
 					printf("Finalizando a compra...\n");
 					printf("Quanto seria em dinheiro?");
-					scanf ("%f", i);
+					scanf ("%f", &i);
 					if (i > total){
-						printf("RECEBA SEU TROCO\n");
+						printf("\nRECEBA SEU TROCO\n");
 						printf("Pagamento efetuado com sucesso! Agradecemos por comprar no Roludo.\n");
 					}
 					if (i < total){
